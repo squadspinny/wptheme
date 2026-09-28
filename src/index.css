@@ -1,0 +1,153 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Literata', Georgia, Cambria, 'Times New Roman', Times, serif;
+  --font-serif: 'Literata', Georgia, Cambria, 'Times New Roman', Times, serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
+}
+
+body {
+  font-family: 'Literata', Georgia, Cambria, 'Times New Roman', Times, serif;
+  background-color: #f9fafb;
+  color: #1f2937;
+  line-height: 1.8;
+  letter-spacing: 0.005em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Ensure Literata headings and text have generous breathing room */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.35;
+  letter-spacing: normal;
+  font-weight: 700;
+}
+
+p, li, article {
+  line-height: 1.8;
+}
+
+code, pre, kbd {
+  font-family: var(--font-mono);
+  letter-spacing: 0;
+}
+
+/* Scrollbar utilities */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ==========================================================================
+   SEO Article / Content Section Styles (Scoped strictly to .seo-article-content)
+   ========================================================================== */
+
+.seo-article-container {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 1px;
+  overflow: hidden;
+  --seo-px: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .seo-article-container {
+    --seo-px: 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .seo-article-container {
+    --seo-px: 2.5rem;
+  }
+}
+
+/* Common visual design for ALL headings H2–H6 inside the SEO article section */
+.seo-article-content h2,
+.seo-article-content h3,
+.seo-article-content h4,
+.seo-article-content h5,
+.seo-article-content h6 {
+  display: block;
+  width: calc(100% + (2 * var(--seo-px))) !important;
+  margin-left: calc(-1 * var(--seo-px)) !important;
+  margin-right: calc(-1 * var(--seo-px)) !important;
+  background-color: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+  border-left: none;
+  border-right: none;
+  color: #0f172a;
+  font-weight: 700;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: calc(var(--seo-px) + 0.25rem);
+  padding-right: var(--seo-px);
+  margin-top: 1.5rem !important;
+  margin-bottom: 0.75rem;
+  border-radius: 0;
+  line-height: 1.22;
+  box-sizing: border-box;
+}
+
+/* Mobile heading font sizes */
+.seo-article-content h2 {
+  font-size: 20px;
+}
+
+.seo-article-content h3 {
+  font-size: 18px;
+}
+
+.seo-article-content h4 {
+  font-size: 17px;
+}
+
+.seo-article-content h5 {
+  font-size: 16px;
+}
+
+.seo-article-content h6 {
+  font-size: 15px;
+}
+
+/* Desktop styles and font sizes */
+@media (min-width: 768px) {
+  .seo-article-content h2,
+  .seo-article-content h3,
+  .seo-article-content h4,
+  .seo-article-content h5,
+  .seo-article-content h6 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: calc(var(--seo-px) + 0.5rem);
+    padding-right: var(--seo-px);
+    margin-top: 2.25rem !important;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+  }
+
+  .seo-article-content h2 {
+    font-size: 24px;
+  }
+
+  .seo-article-content h3 {
+    font-size: 20px;
+  }
+
+  .seo-article-content h4 {
+    font-size: 18px;
+  }
+
+  .seo-article-content h5 {
+    font-size: 16px;
+  }
+
+  .seo-article-content h6 {
+    font-size: 15px;
+  }
+}
+

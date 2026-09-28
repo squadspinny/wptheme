@@ -1,0 +1,6 @@
+{
+  "name": "Errorease",
+  "description": "A clean, modern, responsive tech troubleshooting blog focused on diagnosing and fixing Windows system errors, BSOD stop codes, and driver issues.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
